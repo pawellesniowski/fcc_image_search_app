@@ -26,5 +26,9 @@ app.get('/api/imagesearch/:searchTerm', (req, res)=>{
     }
 });
 
+app.get('/api/latest/imagesearch/', (req, res)=>{
+    res.send('data from mongoDB with recend search info');
+})
+
 app.listen(port, ()=>console.log('app listening on port: ', port));
 
