@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const   express = require('express'),
         {MongoClient} = require('mongodb'),
-        port = 5000,
+        port = process.env.PORT || 5000,
         app = express(),
         imageSearch = require('node-google-image-search'),
         url = 'mongodb://username:password@ds153413.mlab.com:53413/photosearch',
